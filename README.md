@@ -13,7 +13,7 @@ Como desenvolvedor na Onbli Developers, tive a oportunidade de reformular comple
 - **JavaScript:** Interatividade dinâmica e melhorias na experiência do usuário.
 - **Bootstrap:** Framework utilizado para componentes e estilos consistentes.
 
-Explore nossa landing page [aqui](https://abvieri-onbli.netlify.app) e descubra como a paixão pela tecnologia se manifesta na Onbli Developers.
+Explore nossa landing page [aqui](https://abvieri-building.netlify.app) e descubra como a paixão pela tecnologia se manifesta na Onbli Developers.
 
 ## Primeiro Projeto: Bibliotec
 
