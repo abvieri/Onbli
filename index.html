@@ -1,200 +1,503 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Onbli</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Phosphor icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
-    <!--Menu de Navegação-->
-    <header>
-        <div class="nav">
-        <div id="logo">
-        <img src="img/onbli_logo.png" alt="Logo OnBli">
-        <p>Onbli Developer</p>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#SB">Sobre</a></li>
-                <li><a href="#PD">Produtos</a></li>
-                <li><a href="#CT">Contato</a></li>
-            </ul>
-        </nav>
-        </div>
-    </header>
 
-    <!--Banner-->
-    <section class="banner">
-        <div class="container">  
-        <h1>Onbli Developer</h1>
-        <p class="subtitulo">Transformando ideias em tecnologia</p>
-        <p>A Onbli está sempre na vanguarda da tecnologia, <br>buscando 
-            inovações que possam levar nossos clientes<br> ao próximo nível. 
-            Entre em contato e saiba como podemos<br> ajudar sua empresa a 
-            crescer na era digital.</p>
-        <a href="#CT"><div id="btn_banner">
-            <div class="btn_banner">
-                <span>Contato</span>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand purple-text" href="#">Onbli</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#navbar">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
+                    </li>
+                </ul>
             </div>
-        </div></a>
-    </div>
-    </section>
 
-    <!--Conheça a Onbli-->
-    <section id="Onbli">
-    <div>
-    <h2>Conheça a Onbli</h2>
-    <p>Transforme sua presença online com a Onbli, uma empresa de tecnologia 
-        inovadora e criativa. Com anos de experiência na criação de programas 
-        e sites com design simples e atrativo, a Onbli se dedica a fornecer 
-        soluções personalizadas que superam as expectativas de nossos clientes.
-    </p>
-    <p>
-        Nossa equipe altamente capacitada e experiente, trabalha para fornecer 
-        soluções tecnológicas de última geração. Com atendimento personalizado 
-        e atenção aos detalhes, a Onbli oferece soluções para empresas de todos 
-        os portes e ninchos de mercado.
-    </p>
-    </div>
-    </section>
-
-
-     <!--Quem somos-->   
-     <section class="sobre" id="SB">
-        <section class="container">
-
-        <div>
-        <h2>Quem somos</h2>
-        <p>
-            A Onbli é uma empresa de tecnologia especializada no desenvolvimento 
-            de páginas para a internet. Com uma equipe de profissionais altamente 
-            qualificados e experientes, a empresa se dedica a criar soluções 
-            inovadoras e personalizadas para atender às necessidades de seus clientes
-            através de uma abordagem colaborativa e centrada no usuário.
-        </p>
-        <p>
-            Nós buscamos entender as demandas de seus clientes e entregar projetos 
-            que superem suas expectativas. Além disso, a empresa está sempre atenta 
-            às últimas tendências e tecnologias do mercado, buscando oferecer as 
-            melhores soluções para garantir o sucesso dos projetos de seus clientes. 
-            Com compromisso constante e qualidade, a Onbli está sempre 
-            empenhada em entregar resultados excepcionais e criar experiências 
-            digitais únicas para seus usuários.
-        </p>
+            <span class="purple-text" id="recruitment" data-bs-toggle="modal"
+                data-bs-target="#recruitmentModal">Junte-se a
+                nós</span>
         </div>
+    </nav>
 
-        <div id="fundadores">
-            <img src="https://source.unsplash.com/random/380x300" alt="Fundadores da Onbli">
-            <h3>Fundadores da Onbli - 2023</h3>
-        </div>
+    <!-- Modal Recruitment-->
+    <div class="modal fade" id="recruitmentModal" tabindex="-1" aria-labelledby="recruitmentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-        </section>
-        </section>
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="recruitmentModalLabel">Junte-se à Onbli!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Você busca desafios inovadores? A Onbli convida você a fazer parte de nossa equipe dinâmica.
+                        Preencha nosso formulário e inicie esta jornada conosco. Estamos ansiosos para conhecer suas
+                        habilidades!</p>
+
+                    <form name="recruitment" method="POST" data-netlify="true" class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="inputname" class="form-label">Nome</label>
+                            <input type="name" class="form-control" id="inputname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="inputportifolio" class="form-label">Especialização</label>
+                            <input type="text" class="form-control" id="inputespecializacao">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="inputportifolio" class="form-label">Link do seu Portifolio</label>
+                            <input type="text" class="form-control" id="inputportifolio">
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="submit" class="btn">Enviar</button>
+                        </div>
+                    </form>
 
 
-    <!--Produtos-->
-    <section class="produtos" id="PD">
-    <div class="container">
-    <h2>Conheça nossos produtos</h2>
+                </div>
 
-    <div id="bibliotec" class="bibliotec">
-        <div id="imagem">
-        <img alt="logo da bibliotec" src="img/bibliotec.png">
-        </div>
-        <div class="texto">
-        <a href="#">saiba mais</a>
-        <div id="titulo_biblio">
-        <h3>Bibliotec</h3>
-        <p>A Biblioteca do Futuro</p>
-        </div>
-        <p>
-            A bibliotec é uma plataforma criada com o objetivo de auxiliar 
-            professores e instituições de ensino a incentivar seus alunos a se 
-            envolverem no mundo da leitura. A plataforma oferece diversas 
-            ferramentas para que os usuários possam ler os livros de forma 
-            mais interativa e agradável. Além disso, alunos podem reservar 
-            livros na biblioteca fisica.
-        </p>
-        </div>
-    </div>
-
-    <div id="medusa" class="medusa">
-        <img alt="logo da medusa style" src="img/medusa.jpg">
-        <div class="texto">
-        <a href="#">saiba mais</a>
-        <div id="titulo_med">
-        <h3>Medusa Style</h3>
-        <p>Moda e Design</p>
-        </div>
-        <p>
-            O portfólio Medusa apresenta uma variedade de trabalhos que vão desde a 
-            criação de logotipos até o design de interfaces para aplicativos e 
-            sites. Cada projeto é único e reflete a personalidade e as necessidades
-            específicas do cliente. Nosso objetivo é fornecer uma experiência de 
-            usuário agradável e intuitiva, ao mesmo tempo que proporcionamos uma 
-            apresentação visualmente deslumbrante e imersiva.
-        </p>
-    </div>
-    </div>
-    
-    </div>
-    </section>
-
-    <!--Contate-nos-->
-
-    <section id="CT">
-        <div class="containersob">
-            <main class="contatosob"> 
-            <div id="asmargin" class="cont">
-            
-            <h2><strong> Contate-nos </strong></h2>
-            <br><p>Nosso endereço de correspondência é:</p>
-            <p>Rua Virgínia Ferni N° 400 ,</p>
-            <p>São Paulo - SP</p>
-            <p>Telefone: (11) 2566-4512</p>
-            <br>
-            <br>
-            <p>Menu</p>
-            <ul>
-                <li><a href="#SB">Sobre</a></li>
-                <li><a href="#PD">Produtos</a></li>
-                <li><a href="#CT">Contato</a></li>
-            </ul>
+                <div class="modal-footer d-flex justify-content-center">
+                    <p>Dúvidas? Contate-nos: onblidev@gmail.com</p>
+                </div>
             </div>
-            </main>
+        </div>
+    </div>
 
-            <div class="contat">
-            <aside class="contatoform"> 
-                <h2 id="center"> <strong> Fale com nossa equipe </strong></h2>
-                <form class="form">
-                    <input type="field" id="txtCenter" class="teste" name="Email" placeholder="Insira um E-mail válido">
-                    <input type="field" id="txtCenter" class="teste" name="AssuntoEmail" placeholder="Insira o assunto do E-mail">
-                    <input type="text"  id="txtCenter" class="teste2" name="mesage" placeholder="Digite sua mensagem aqui">
-                    <input type="submit"id="but" name="Enviar">
+    <!-- Banner -->
+    <section class="container" id="banner-bg">
+        <div id="banner-container">
+            <div id="banner-img">
+                <img src="./img/banner-logo.png" alt="Logo da Onbli">
+            </div>
+
+            <div id="banner-text">
+                <h1>Onbli Developer</h1>
+                <Span>Transformando ideias em tecnologia</Span>
+                <p>A Onbli está sempre na vanguarda da tecnologia, buscando inovações que possam levar nossos clientes
+                    ao próximo nível. Entre em contato e saiba como podemos ajudar sua empresa a crescer na era digital.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sobre -->
+    <section class="container-xxl" id="sobre">
+        <h2 id="h2">Sobre</h2>
+        <span id="span">Conheça a <strong class="purple-text">Onbli</strong></span>
+        <div id="sobre-content">
+            <div class="sobre-document row align-items-start active" id="01">
+                <div class="col-1 marca-pagina">
+                    <span class="purple-text">01</span>
+                    <p>Quem somos</p>
+                </div>
+                <div class="col-11 texto-pagina">
+                    <h3>Quem somos</h3>
+                    <p>Transforme completamente sua presença online com a Onbli, uma empresa inovadora e criativa no
+                        universo da tecnologia. Com uma vasta experiência na criação de programas e websites de design
+                        cativante e intuitivo, a Onbli dedica-se a proporcionar soluções personalizadas que não apenas
+                        atendem, mas superam as expectativas dos nossos clientes.</p>
+
+                    <p>Nossa equipe, composta por profissionais altamente capacitados e experientes, trabalha
+                        incansavelmente para oferecer soluções tecnológicas de última geração. Com um atendimento
+                        personalizado e uma meticulosa atenção aos detalhes, a Onbli desenvolve soluções adaptadas a
+                        empresas de todos os tamanhos e segmentos de mercado.</p>
+
+                    <p>Mas a Onbli é mais do que uma simples empresa de tecnologia. Somos especialistas no
+                        desenvolvimento
+                        de páginas para a internet, e nossa equipe está comprometida em criar soluções inovadoras e
+                        personalizadas, abraçando uma abordagem colaborativa e centrada no usuário. Queremos entender as
+                        demandas dos nossos clientes e superar suas expectativas, proporcionando uma experiência
+                        verdadeiramente única.</p>
+
+                    <p>onvidamos você a explorar e conhecer todos os membros da nossa equipe dedicada. Cada
+                        colaborador na
+                        Onbli desempenha um papel fundamental na entrega de projetos excepcionais e na criação de
+                        experiências digitais memoráveis. Junte-se a nós e descubra como nossa expertise e compromisso
+                        constante podem transformar positivamente o seu mundo online.</p>
+                </div>
+            </div>
+
+            <div class="sobre-document row align-items-start" id="02">
+                <div class="col-1 marca-pagina">
+                    <span class="purple-text">02</span>
+                    <p>Abraão Vieri</p>
+                </div>
+                <div class="col-11 texto-pagina">
+                    <h3>Abraão Vieri</h3>
+
+                    <span>Gerente de Desenvolvimento de Software (DS) - Programador Backend e Frontend na
+                        Onbli</span>
+
+                    <p>Com uma paixão inabalável pela tecnologia, Abraão lidera nossa equipe de desenvolvimento com
+                        visão
+                        estratégica e habilidades técnicas excepcionais. Seu comprometimento com a excelência e inovação
+                        torna-o um líder inspirador em nossos projetos.</p>
+                    <br>
+
+                    <span>Responsabilidades Principais:</span>
+                    <br>
+
+                    <b>Gestão de Projetos: </b>
+                    Abraão supervisiona e coordena o ciclo de vida completo dos projetos, desde a concepção até a
+                    entrega. Sua habilidade em definir metas claras e delegar tarefas otimiza a eficiência da equipe.
+                    <br><br>
+
+                    <b>Programação Backend: </b>
+                    Como especialista em Backend, Abraão domina as linguagens e tecnologias necessárias para
+                    desenvolver robustas estruturas de servidor. Ele garante que nossos sistemas sejam seguros,
+                    escaláveis e eficientes.
+                    <br><br>
+
+                    <b>Programação Frontend: </b>
+                    Na área de Frontend, Abraão utiliza sua criatividade e expertise para criar interfaces de usuário
+                    intuitivas e atraentes. Ele se dedica a proporcionar uma experiência do usuário excepcional em cada
+                    projeto.
+                    <br><br>
+
+                    <b>Colaboração Interdisciplinar: </b>
+                    Abraão promove uma cultura de colaboração, incentivando a troca de ideias entre as equipes de
+                    desenvolvimento e outras áreas. Sua abordagem integrada resulta em soluções mais abrangentes e
+                    inovadoras.
+                </div>
+            </div>
+
+            <div class="sobre-document row align-items-start" id="03">
+                <div class="col-1 marca-pagina">
+                    <span class="purple-text">03</span>
+                    <p>Izaque Lima</p>
+                </div>
+                <div class="col-11 texto-pagina">
+                    <h3>Izaque Lima</h3>
+                    <span>Gestor de Projeto e Social Media na Onbli</span>
+
+                    <p>Com uma paixão ardente por projetos e mídias sociais, Izaque lidera nossas iniciativas com uma
+                        visão estratégica
+                        e habilidades excepcionais em gestão de projetos e comunicação digital. Seu compromisso com a
+                        excelência e
+                        inovação o torna um líder inspirador em nossos empreendimentos.</p>
+                    <br>
+
+                    <span>Responsabilidades Principais:</span>
+                    <br>
+
+                    <b>Gestão de Projetos: </b>
+                    Izaque supervisiona e coordena o ciclo de vida completo dos projetos, desde a concepção até a
+                    entrega. Sua habilidade
+                    em estabelecer metas claras e gerenciar equipes otimiza a eficiência em cada fase do projeto.
+                    <br><br>
+
+                    <b>Social Media Management: </b>
+                    Como especialista em mídias sociais, Izaque desenvolve estratégias envolventes para promover a
+                    presença online da
+                    Onbli. Ele utiliza sua criatividade para construir e manter uma conexão sólida com nossa comunidade
+                    digital.
+                    <br><br>
+
+                    <b>Colaboração Interdisciplinar: </b>
+                    Izaque fomenta uma cultura de colaboração, incentivando a troca de ideias entre as equipes de
+                    projeto e outras
+                    áreas. Sua abordagem integrada resulta em soluções mais abrangentes e inovadoras.
+
+                </div>
+            </div>
+
+            <div class="sobre-document row align-items-start" id="04">
+                <div class="col-1 marca-pagina">
+                    <span class="purple-text">04</span>
+                    <p>Caio Simionato</p>
+                </div>
+                <div class="col-11 texto-pagina">
+                    <h3>Caio Simionato</h3>
+                    <span>Documentador na Onbli</span>
+
+                    <p>Com precisão e organização, Caio lidera nossa equipe de documentação com
+                        habilidades excepcionais
+                        na arte de traduzir conceitos complexos em documentação clara e acessível. Seu compromisso com a
+                        excelência e
+                        clareza torna-o uma figura fundamental em nossos projetos.</p>
+                    <br>
+
+                    <span>Responsabilidades Principais:</span>
+                    <br>
+
+                    <b>Elaboração de Documentação: </b>
+                    Caio é responsável por criar e manter documentação detalhada para nossos projetos, garantindo que
+                    todos os processos
+                    e informações estejam documentados de forma clara e acessível.
+                    <br><br>
+
+                    <b>Colaboração com as Equipes: </b>
+                    Colaborando estreitamente com as equipes de desenvolvimento, Caio assegura que a documentação esteja
+                    alinhada com
+                    as últimas atualizações e alterações nos projetos, garantindo consistência e compreensão mútua.
+                    <br><br>
+
+                    <b>Garantia da Qualidade Documental: </b>
+                    Caio realiza revisões regulares para garantir que a documentação esteja atualizada e atenda aos
+                    padrões de qualidade
+                    estabelecidos pela Onbli, proporcionando uma referência precisa para toda a equipe.
+                </div>
+            </div>
+
+            <div class="sobre-document row align-items-start" id="05">
+                <div class="col-1 marca-pagina">
+                    <span class="purple-text">05</span>
+                    <p>Luís Gustavo</p>
+                </div>
+                <div class="col-11 texto-pagina">
+                    <h3>Luís Gustavo</h3>
+                    <span>Designer Visual na Onbli</span>
+
+                    <p>Compromissado com estética e criatividade, Luís Gustavo lidera nossa equipe de design visual,
+                        trazendo uma visão
+                        inovadora e habilidades excepcionais para transformar ideias em experiências visuais
+                        envolventes. Sua dedicação à
+                        excelência estética o torna uma peça-chave em nossos projetos.</p>
+                    <br>
+
+                    <span>Responsabilidades Principais:</span>
+                    <br>
+
+                    <b>Design de Interface: </b>
+                    Luís Gustavo é responsável por criar interfaces visuais intuitivas e atraentes, garantindo uma
+                    experiência do usuário
+                    excepcional em cada projeto.
+                    <br><br>
+
+                    <b>Branding e Identidade Visual: </b>
+                    Como especialista em branding, ele desenvolve e mantém a identidade visual da Onbli, garantindo
+                    consistência e
+                    reconhecimento da marca.
+                    <br><br>
+
+                    <b>Colaboração Criativa: </b>
+                    Luís Gustavo colabora estreitamente com as equipes de desenvolvimento, marketing e documentação para
+                    garantir que
+                    todos os elementos visuais estejam alinhados com os objetivos e valores da Onbli.
+
+                </div>
+            </div>
+
+            <div class="sobre-document row align-items-start" id="06">
+                <div class="col-1 marca-pagina">
+                    <span class="purple-text">06</span>
+                    <p>Lucas Caetano</p>
+                </div>
+                <div class="col-11 texto-pagina">
+                    <h3>Lucas Caetano</h3>
+                    <span>Desenvolvedor Full Stack na Onbli</span>
+
+                    <p>Lucas Caetano é um talentoso desenvolvedor Full Stack na Onbli, trazendo sua paixão e habilidades
+                        excepcionais tanto
+                        para o Frontend quanto para o Backend. Sua versatilidade e dedicação à excelência técnica o
+                        tornam um ativo
+                        valioso em nossos projetos.</p>
+                    <br>
+
+                    <span>Responsabilidades Principais:</span>
+                    <br>
+
+                    <b>Desenvolvimento Frontend: </b>
+                    Lucas é responsável por criar interfaces de usuário intuitivas e envolventes, proporcionando uma
+                    experiência visual
+                    excepcional para nossos usuários.
+                    <br><br>
+
+                    <b>Desenvolvimento Backend: </b>
+                    Como especialista em Backend, Lucas domina as linguagens e tecnologias necessárias para desenvolver
+                    estruturas de
+                    servidor robustas, garantindo a segurança e eficiência de nossos sistemas.
+                    <br><br>
+
+                    <b>Colaboração Interdisciplinar: </b>
+                    Lucas colabora ativamente com equipes de diferentes áreas, garantindo a integração eficiente entre
+                    Frontend e Backend
+                    para criar soluções inovadoras e coesas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projetos -->
+    <section class="container-xxl" id="projetos">
+        <h2 id="h2">Projetos</h2>
+        <span id="span">Conheça nossos <strong class="purple-text">sistemas</strong></span>
+        <div id="projetos-content">
+            <div class="col-6" id="projetos-texto">
+                <div>
+                    <img src="./img/bibliotec-logo.png" alt="Logo da Bibliotec">
+                    <h3>Bibliotec</h3>
+                    <span>A Biblioteca do Futuro</span>
+
+                    <div id="hidehidden-video">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/cZCm_i6YvAk?si=632XlhrT7AtkeEsa"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+
+                        </iframe>
+                    </div>
+                </div>
+                <p>A bibliotec é uma plataforma criada com o objetivo de auxiliar professores e instituições de ensino a
+                    incentivar seus alunos a se envolverem no mundo da leitura. A plataforma oferece diversas
+                    ferramentas para que os usuários possam ler os livros de forma mais interativa e agradável. Além
+                    disso, alunos podem reservar livros na biblioteca fisica.</p>
+                <a href="https://bibliotecbeta.netlify.app" target="_blank"><button class="purple-text">Acessar
+                        Projeto</button></a>
+            </div>
+            <div class="col-6" id="projetos-video">
+                <div>
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/cZCm_i6YvAk?si=632XlhrT7AtkeEsa" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contato -->
+    <section class="container-xxl" id="contato">
+        <h2 id="h2">contato</h2>
+        <span id="span">Fale com nossa <strong class="purple-text">equipe</strong></span>
+        <div id="contato-content">
+
+            <div class="col-5" id="contato-texto">
+                <p>Fique à vontade para entrar em contato conosco através do e-mail, onde teremos o prazer de discutir
+                    ideias e projetos. Alternativamente, estamos disponíveis no WhatsApp para uma comunicação mais ágil
+                    e direta. Estamos ansiosos para ouvir de você e colaborar para tornar suas aspirações digitais uma
+                    realidade.</p>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#410256"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z">
+                            </path>
+                        </svg>
+                        Onblidev@gmail.com
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#410256"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z">
+                            </path>
+                        </svg>
+                        11 95883-8656
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#410256"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z">
+                            </path>
+                        </svg>
+                        SP, São Paulo
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-6" id="contato-formulario">
+
+                <form name="contact" method="POST" data-netlify="true" class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="inputnamecontato" class="form-label">Nome</label>
+                        <input type="name" class="form-control" id="inputnamecontato">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputemailcontato" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputemailcontato">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inputassunto" class="form-label">Assunto</label>
+                        <input type="text" class="form-control" id="inputassunto">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inputmensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="textareaMensage" rows="3"
+                            placeholder="Digite sua mensagem..." name="message"></textarea>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-end">
+                        <button type="submit" class="btn">Enviar</button>
+                    </div>
                 </form>
-            </aside>
             </div>
+        </div>
     </section>
 
-    <section>
-        <footer class="footic"> 
-            <div class="local">
-            <a href="#"><img id="footIcLeft" src="img/gpsicon.jpg" alt="biblioteclogo"/></a>
-            <p>Brasil</p>
+    <!-- Rodapé -->
+    <footer class="container-xxl" id="rodape">
+        <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#navbar">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="#sobre">Sobre</a>
+            <a class="nav-link active" aria-current="page" href="#projetos">Projetos</a>
+            <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
+        </div>
+        <div class="copyright">
+            <span>© 2024 Onbli. Todos os direitos reservados</span>
+            <div>
+                <span class="ms-3">Termos de Serviço</span>
+                <span class="ms-3">Políticas de Privacidade</span>
             </div>
-            <p class="Onbli">© 2023 Onbli. Todos os direitos reservados </p>
-            <div class="icons">
-            <a href="#"><img id="footIcRight" src="img/faceIc.png"></a>
-            <a href="#"><img id="amais" src="img/InstaIc.png"></a>
-            </div>
-        </footer>
-    </section>
+        </div>
+    </footer>
 
-    <script type="text/javascript" src="scripty.js"></script>
-    </body>
+    <!-- JS -->
+    <script src="./scripty.js"></script>
+</body>
+
 </html>

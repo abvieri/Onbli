@@ -1,0 +1,141 @@
+@import './variaveis';
+
+
+#navbar {
+    border-bottom: solid 1px $light-gray;
+
+    #recruitment {
+        cursor: pointer;
+        width: auto;
+    }
+
+    .navbar-brand {
+        cursor: default;
+        font-weight: 700;
+    }
+
+    .navbar-collapse {
+        justify-content: center !important;
+    }
+}
+
+#banner-bg {
+    height: 85vh;
+    margin-top: 1rem;
+    border-radius: 30px;
+    @include flex-center (column, flex-start);
+    background-image: url(../img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    #banner-container {
+        @include flex-center (row, center);
+
+        #banner-img {
+            width: 50%;
+            @include flex-center (column, center);
+
+            img {
+                width: 70%;
+                animation-duration: 6s;
+                animation-delay: 2s;
+                animation-name: onbli-banner-img;
+            }
+
+            @keyframes onbli-banner-img {
+                60% {
+                    transform: rotate(-90deg);
+                    margin-left: 100%;
+                }
+
+                to {
+                    transform: rotate(0);
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    #banner-text {
+        @include flex-center (column, flex-start);
+        width: 50%;
+        color: $white;
+        animation-duration: 8s;
+        animation-name: onbli-banner-text;
+        animation-timing-function: ease-in;
+
+        @keyframes onbli-banner-text {
+            from {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-weight: 600;
+        }
+
+        span {
+            font-size: x-large;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+
+    #navbar {
+        #recruitment {
+            display: none;
+        }
+
+        .navbar-nav {
+            align-items: flex-end !important;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end !important;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #banner-bg {
+        border-radius: 0;
+        margin-top: 0;
+
+        #banner-container {
+            @include flex-center(column, center);
+
+            #banner-img img {
+                width: 70%;
+                animation-duration: 6s;
+                animation-delay: 2s;
+
+                @keyframes onbli-banner-img {
+                    60% {
+                        transform: rotate(-90deg);
+                    }
+
+                    to {
+                        transform: rotate(0);
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            #banner-text{
+                margin-top: 2.5rem;
+                width: 90%;
+            }
+        }
+    }
+}

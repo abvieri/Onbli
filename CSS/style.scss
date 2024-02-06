@@ -1,0 +1,64 @@
+@import './variaveis';
+@import './Inicio';
+@import './sobre';
+@import './projetos';
+@import './contato';
+@import './rodape';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $light-purple;
+    border-radius: 15px;
+
+    &:hover {
+        background: $purple;
+    }
+}
+
+#h2 {
+    font-size: small;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+#span {
+    font-size: 2rem;
+    color: $black;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+.purple-text {
+    color: $purple !important;
+}
+
+.nav-link {
+    &:hover {
+        color: $purple !important;
+    }
+}
+
+.btn {
+    background-color: $purple !important;
+    color: #fff !important;
+    font-weight: 300 !important;
+}
