@@ -49,6 +49,10 @@
                 color: $black;
                 height: -webkit-fill-available;
 
+                #abTitle{
+                    text-align: start;
+                }
+
                 @keyframes texto-pagina {
                     from {
                         transform: translateX(10%);
