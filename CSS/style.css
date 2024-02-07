@@ -211,7 +211,7 @@
     flex-wrap: nowrap;
   }
   #sobre #sobre-content .sobre-document {
-    width: 80% !important;
+    width: 90% !important;
     display: flex;
     flex-direction: column;
   }
