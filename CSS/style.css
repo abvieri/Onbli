@@ -238,6 +238,9 @@
     align-items: center;
     height: 480px;
   }
+  #sobre #sobre-content .sobre-document .texto-pagina p {
+    font-size: x-small !important;
+  }
   @keyframes texto-pagina {
     from {
       transform: translateY(10%);

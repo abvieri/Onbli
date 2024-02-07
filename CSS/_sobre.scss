@@ -50,11 +50,11 @@
                 height: -webkit-fill-available;
 
                 @keyframes texto-pagina {
-                    from{
+                    from {
                         transform: translateX(10%);
                     }
 
-                    to{
+                    to {
                         transform: translateX(0);
                     }
                 }
@@ -93,7 +93,7 @@
             flex-wrap: nowrap;
 
             .sobre-document {
-                width: 80%!important;
+                width: 80% !important;
                 display: flex;
                 flex-direction: column;
 
@@ -125,12 +125,16 @@
                     align-items: center;
                     height: 480px;
 
+                    p {
+                        font-size: x-small !important;
+                    }
+
                     @keyframes texto-pagina {
-                        from{
+                        from {
                             transform: translateY(10%);
                         }
-    
-                        to{
+
+                        to {
                             transform: translateX(0);
                         }
                     }
