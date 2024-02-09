@@ -12,6 +12,7 @@ Como desenvolvedor na Onbli Developers, tive a oportunidade de reformular comple
 - **CSS:** Estilo elegante e responsivo para uma apresentação visualmente atraente.
 - **JavaScript:** Interatividade dinâmica e melhorias na experiência do usuário.
 - **Bootstrap:** Framework utilizado para componentes e estilos consistentes.
+- **Sass**: Pré-processador CSS que facilita a manutenção e extensão do código.
 
 Explore nossa landing page [aqui](https://abvieri-building.netlify.app) e descubra como a paixão pela tecnologia se manifesta na Onbli Developers.
 
