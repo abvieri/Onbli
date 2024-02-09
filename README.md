@@ -20,4 +20,4 @@ Explore nossa landing page [aqui](https://ab-onbli.netlify.app) e descubra como 
 
 Desenvolvemos inicialmente a Bibliotec, uma iniciativa que visava trazer inovação aos sistemas bibliotecários. Totalmente automatizada, buscava ser a melhor biblioteca eletrônica do mercado, proporcionando praticidade e eficiência. Após a descontinuação do projeto, assumi a iniciativa, reformulando completamente o site, desde o backend até o frontend.
 
-Explore a versão revitalizada da Bibliotec [aqui](https://abvieri-bibliotec.netlify.app) ou obtenha mais detalhes no [repositório](https://github.com/abvieri/Bibliotec) do projeto.
+Explore a versão revitalizada da Bibliotec [aqui](https://ab-bibliotec.netlify.app) ou obtenha mais detalhes no [repositório](https://github.com/abvieri/Bibliotec) do projeto.
